@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title >Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <div class="container">
+
+        <h3>Total Books: <span id="totalBooks">0</span></h3>
+
+        <input type="text" id="searchBar" placeholder="Search Book or Author" onkeyup="searchBook()">
+        <br>
+
+        <!-- Add Book -->
+        <h3>Add Book</h3>
+        <input type="text" id="bookName" placeholder="Enter Book Name">
+        <input type="text" id="authorName" placeholder="Enter Author Name">
+        <input type="number" id="bookQty" placeholder="Quantity" min="1">
+        <button onclick="addBook()">Add Book</button>
+
+        <!-- Issue Book -->
+        <h3>Issue Book</h3>
+        <input type="text" id="issuePerson" placeholder="Person Name">
+        <input type="text" id="issueBookName" placeholder="Book Name">
+        <button onclick="issueBook()">Issue Book</button>
+
+        <!-- Return Book -->
+        <h3>Return Book</h3>
+        <input type="text" id="returnPerson" placeholder="Person Name">
+        <input type="text" id="returnBookName" placeholder="Book Name">
+        <button onclick="returnBook()">Return Book</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Author</th>
+                    <th>Total Qty</th>
+                    <th>Available Qty</th>
+                    <th>Issued To</th>
+                </tr>
+            </thead>
+            <tbody id="bookList"></tbody>
+        </table>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
